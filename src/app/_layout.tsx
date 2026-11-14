@@ -1,18 +1,59 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { registrarInsightBackgroundTask } from "@/background/insightTask";
+import { initializeDatabase } from "@/database/database";
+import { agendarTodasNotificacoes } from "@/notifications";
+import { configurarNotificacoes } from "@/notifications/notificationService";
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { Stack } from "expo-router";
+import { useEffect } from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-SplashScreen.preventAutoHideAsync();
+import { ThemeProvider } from "@/context/ThemeContext";
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function Layout() {
+  useEffect(() => {
+    async function inicializarAplicacao() {
+      try {
+        const db = await initializeDatabase();
+
+        const permitido = await configurarNotificacoes();
+
+        if (permitido) {
+          await agendarTodasNotificacoes(db);
+        }
+
+        await registrarInsightBackgroundTask();
+      } catch (error) {
+        console.error("❌ Erro ao inicializar aplicação:", error);
+      }
+    }
+
+    inicializarAplicacao();
+  }, []);
+
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="home" options={{ headerShown: false }} />
+
+          <Stack.Screen name="registrar" options={{ headerShown: false }} />
+
+          <Stack.Screen name="historico" options={{ headerShown: false }} />
+
+          <Stack.Screen
+            name="historico/[id]"
+            options={{ headerShown: false }}
+          />
+
+          <Stack.Screen name="graficos" options={{ headerShown: false }} />
+
+          <Stack.Screen name="configuracoes" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }
