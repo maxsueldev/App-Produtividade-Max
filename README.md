@@ -109,8 +109,11 @@ O desenvolvimento e os testes foram realizados em ambiente Android, utilizando a
 
 <p align="center">
   <img src="./src/assets/Screenshot_1.png" width="200" />
-  <img src="./assets/Screenshot_2" width="200" />
-  <img src="./assets/Screenshot_3" width="200" />
+  <img src="./src/assets/Screenshot_2" width="200" />
+  <img src="./src/assets/Screenshot_3" width="200" />
+  <img src="./src/assets/Screenshot_4.png" width="200" />
+  <img src="./src/assets/Screenshot_5" width="200" />
+  <img src="./src/assets/Screenshot_6" width="200" />
 </p>
 
 ## 🚀 Aprendizados
