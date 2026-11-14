@@ -1,56 +1,130 @@
-# Welcome to your Expo app 👋
+# 📱 Produtividade Max
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile de produtividade desenvolvido com **React Native, TypeScript e Expo**, com o objetivo de centralizar o acompanhamento de hábitos, estudos, sono e atividades diárias em um único lugar.
 
-## Get started
+O projeto foi desenvolvido para transformar o acompanhamento da rotina em algo mais organizado, permitindo registrar atividades, estabelecer metas e visualizar a própria evolução ao longo do tempo.
 
-1. Install dependencies
+## 🎯 Objetivo do projeto
 
-   ```bash
-   npm install
-   ```
+O Produtividade Max surgiu da ideia de desenvolver uma ferramenta pessoal para melhorar a organização da rotina e acompanhar diferentes aspectos da produtividade.
 
-2. Start the app
+A aplicação reúne funcionalidades de monitoramento diário, gerenciamento de hábitos e acompanhamento de indicadores, utilizando armazenamento local para manter os dados diretamente no dispositivo.
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Funcionalidades
 
-In the output, you'll find options to open the app in a
+### 😴 Registro de sono
+- Registro dos horários de sono.
+- Acompanhamento da duração do descanso.
+- Histórico dos registros.
+- Comparação com metas estabelecidas.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 📚 Controle de estudos
+- Registro de sessões de estudo.
+- Acompanhamento do tempo dedicado aos estudos.
+- Histórico das atividades.
+- Monitoramento das metas de estudo.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🚭 Controle de tabagismo
+- Registro diário da quantidade de cigarros consumidos.
+- Histórico de consumo.
+- Acompanhamento da evolução.
+- Definição de metas para redução do consumo.
 
-## Get a fresh project
+### 🎯 Gerenciamento de hábitos
+- Cadastro e organização de hábitos.
+- Registro de hábitos realizados diariamente.
+- Acompanhamento da consistência.
+- Monitoramento das metas estabelecidas.
 
-When you're ready, run:
+### 📊 Métricas e evolução
+- Centralização dos indicadores diários.
+- Acompanhamento dos registros de diferentes atividades.
+- Histórico de produtividade.
+- Visualização da evolução dos hábitos e metas.
 
-```bash
-npm run reset-project
-```
+### ⚙️ Configurações
+- Personalização do perfil do usuário.
+- Definição de metas individuais.
+- Configuração de horários de lembretes.
+- Alternância entre tema claro e escuro.
+- Persistência das preferências no banco de dados local.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 🔔 Notificações
+- Lembretes relacionados à rotina de estudos.
+- Lembretes para registro e acompanhamento de hábitos.
+- Notificações para hidratação.
+- Lembretes relacionados ao sono e à revisão da rotina.
 
-### Other setup steps
+## 🛠️ Tecnologias utilizadas
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+| Tecnologia | Aplicação |
+|---|---|
+| React Native | Desenvolvimento da interface mobile |
+| TypeScript | Tipagem estática e segurança do código |
+| Expo | Ambiente e ferramentas de desenvolvimento |
+| Expo SQLite | Banco de dados e persistência local |
+| React Hooks | Gerenciamento de estados e lógica dos componentes |
+| Expo Notifications | Recursos de notificações locais |
+| Expo Router | Navegação da aplicação |
 
-## Learn more
+## 🗄️ Banco de dados
 
-To learn more about developing your project with Expo, look at the following resources:
+A aplicação utiliza **SQLite** por meio do Expo SQLite, permitindo armazenar os dados localmente no dispositivo, sem depender de um servidor externo para o funcionamento dos registros.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Entre as tabelas utilizadas estão:
 
-## Join the community
+- `days`: organização dos registros diários.
+- `sleep_records`: registros de sono.
+- `study_sessions`: sessões de estudo.
+- `smoking_records`: registros de consumo de cigarros.
+- `daily_metrics`: métricas diárias.
+- `habits`: cadastro de hábitos.
+- `habit_records`: acompanhamento dos hábitos realizados.
 
-Join our community of developers creating universal apps.
+A aplicação também utiliza persistência local para as configurações e preferências do usuário.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📱 Ambiente de desenvolvimento
+
+O projeto foi desenvolvido utilizando:
+
+- React Native.
+- Expo SDK 57.
+- TypeScript.
+- Expo SQLite.
+- Development Build para execução dos recursos nativos.
+
+O desenvolvimento e os testes foram realizados em ambiente Android, utilizando armazenamento local no dispositivo.
+
+## 📌 Características do projeto
+
+- Aplicação mobile com foco em produtividade pessoal.
+- Armazenamento local de informações.
+- Organização de dados por categorias.
+- Metas e acompanhamento de atividades.
+- Configurações personalizáveis.
+- Interface com suporte a tema claro e escuro.
+- Estrutura desenvolvida com TypeScript.
+
+## 🚀 Aprendizados
+
+O desenvolvimento deste projeto proporcionou experiência prática em diferentes aspectos do desenvolvimento mobile:
+
+- Construção de aplicações com React Native.
+- Utilização de TypeScript em projetos mobile.
+- Gerenciamento de estados e funcionalidades.
+- Integração e manipulação de banco de dados SQLite.
+- Persistência de dados local.
+- Organização de funcionalidades e regras de negócio.
+- Configuração de recursos nativos utilizando Expo.
+
+## 👨‍💻 Desenvolvedor
+
+**Maxsuel Fernando Brito de Andrade Santos**
+
+- [LinkedIn](https://linkedin.com/in/maxsuelfernandob/)
+- [GitHub](https://github.com/maxsueldev)
+- [Portfólio](https://maxsuel-fernando-frontend.vercel.app)
+
+---
+
+⭐ Projeto pessoal desenvolvido para fins de aprendizado e aplicação prática de conhecimentos em desenvolvimento mobile.
