@@ -105,6 +105,14 @@ O desenvolvimento e os testes foram realizados em ambiente Android, utilizando a
 - Interface com suporte a tema claro e escuro.
 - Estrutura desenvolvida com TypeScript.
 
+## 👀 Telas e Demonstração
+
+<p align="center">
+  <img src="./src/assets/Screenshot_1.png" width="200" />
+  <img src="./assets/Screenshot_2" width="200" />
+  <img src="./assets/Screenshot_3" width="200" />
+</p>
+
 ## 🚀 Aprendizados
 
 O desenvolvimento deste projeto proporcionou experiência prática em diferentes aspectos do desenvolvimento mobile:
