@@ -122,6 +122,10 @@ O desenvolvimento e os testes foram realizados em ambiente Android, utilizando a
   <img src="./src/assets/Screenshot_12.png" width="200" />
 </p>
 
+## 🎥 Demonstração em vídeo
+
+![Demonstração do Produtividade Max](./src/assets/demo.gif)
+
 ## 🚀 Aprendizados
 
 O desenvolvimento deste projeto proporcionou experiência prática em diferentes aspectos do desenvolvimento mobile:
